@@ -12,7 +12,7 @@ client.on("ready", () => {
     client.on("messageCreate", message => {
         if (message.content == "!nuovoticketgrafica") {
             var embedticket = new Discord.MessageEmbed()
-            .setColor('#ff002b')
+            .setColor('#00ff6d')
             .setTitle('GRAFICA')
             .setDescription('Clicca sul bottone per richiedere una grafica')
             .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
