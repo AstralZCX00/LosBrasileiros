@@ -15,7 +15,7 @@ client.on("ready", () => {
             .setColor('#00ff6d')
             .setTitle('GRAFICA')
             .setDescription('Clicca sul bottone per richiedere una grafica')
-            .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
+            .setThumbnail('https://cdn.discordapp.com/attachments/951966053448175656/952200372649357383/Logo_los_brasileiros_Tavola_disegno_1.png')
             
             var button1 = new Discord.MessageButton()
                 .setLabel("Richiedi una grafica")
