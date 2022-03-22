@@ -63,7 +63,7 @@ client.on("ready", () => {
                     }
                 ]
             }).then(canale => {
-                canale.send('Grazie per aver aperto un ticket, entra nel server ByZCX per visualizzare il listino grafiche e richiederne una! https://discord.gg/7DsnkqvGMH')
+                canale.send('Grazie per aver aperto un ticket, entra nel server ByZCX per visualizzare il listino grafiche e richiederne una! https://discord.gg/7DsnkqvGMH' + mesage.author.toString())
             })
         }
     })
