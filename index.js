@@ -32,39 +32,50 @@ client.on("ready", () => {
     client.on("interactionCreate", interaction => {
         if (interaction.customId == "apriTicket2") {
             interaction.deferUpdate()
-            if (interaction.guild.channels.cache.find(canale => canale.topic == `User ID: ${interaction.user.id}`)) {
-                interaction.user.send("Hai gia un ticket aperto").catch(() => { })
-                return
-            }
-            interaction.guild.channels.create(interaction.user.username, {
-                type: "text",
-                topic: `User ID: ${interaction.user.id}`,
-                parent: "955103019182198855", //Settare la categoria,
-                permissionOverwrites: [
-                    {
-                        id: interaction.guild.id,
-                        deny: ["VIEW_CHANNEL"]
-                    },
-                    {
-                        id: interaction.user.id,
-                        allow: ["VIEW_CHANNEL"]
-                    },
-                    {
-                        id: "948595809946046574",
-                        allow: ["VIEW_CHANNEL"]
-                    },
-                    {
-                        id: "949326008153169990",
-                        allow: ["VIEW_CHANNEL"]
-                    },
-                    {
-                        id: "949657539337924608",
-                        allow: ["VIEW_CHANNEL"]
-                    }
-                ]
-            }).then(canale => {
-                canale.send('Grazie per aver aperto un ticket, entra nel server ByZCX per visualizzare il listino grafiche e richiederne una! https://discord.gg/7DsnkqvGMH')
-            })
+            var embed4 = new Discord.MessageEmbed()
+        .setColor('#ff002b')
+        .setTitle('PREZZI GRAFICHE')
+        .setDescription('nei fields sottostanti troverete i prezzi delle grafiche')
+        .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
+        .addField('\u200b', '\u200b')
+        .addFields(
+             {
+                 name: 'LOGO',
+                 value: '€50.00',
+                 inline: false 
+             },
+             {
+                 name: 'BANNER',
+                 value: '€45.00',
+                 inline: false
+             },
+             {
+                 name: 'COPERTINE',
+                 value: '€35.00',
+                 inline: false
+             },
+             {
+                 name: 'STICKER',
+                 value: '€15.00 x3',
+                 inline: false
+             },
+             {
+                 name: 'SFONDO PC/CELLULARE',
+                 value: '€35.00 per cellulare e pc 16:9, €45.00 per pc con risoluzione diversa da quella standard',
+                 inline: false
+             },
+             {
+                 name: 'VIDEO CLIP',
+                 value: '€55.00 ogni 15 minuti (i prezzi veranno scalati in base alla lunghezza del video clip) + preventivo di €15.00',
+                 inline: false
+             },
+             {
+                 name: 'INTRO/OUTRO',
+                 value: '€65.00 per x1 intro + x1 outro',
+                 inline: false
+             }
+        )
+        message.author.send({ embeds: [embed4] })
         }
     })
     
